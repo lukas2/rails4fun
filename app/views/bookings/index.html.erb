@@ -1,0 +1,11 @@
+<h1>All your bookings</h1>
+
+<table>
+  <% @bookings.each do |booking| %>
+    <tr><td><%= link_to "x", booking_path(booking), :method => :delete %></td><td><%= booking.description %></td><td><%= booking.amount %></td><td><%= link_to "Editieren", edit_booking_path(booking) %></td></tr>
+  <% end %>
+</table>
+
+<p>
+  <%= link_to "Neues Booking", new_booking_path %>
+</p>

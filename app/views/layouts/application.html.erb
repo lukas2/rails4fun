@@ -6,9 +6,15 @@
   <%= javascript_include_tag :defaults %>
   <%= csrf_meta_tag %>
 </head>
-<body>
+<body style="background: #CCC;">
 
-<%= yield %>
+  <%= image_tag "cloud.jpg", :width => 100, :height => 75, :style => "float: left; margin-right: 20px;" %>
+  <h1>
+    <%= wise_words %>
+  </h1>
+  <div style="background: white; width: 800px; padding: 10px; margin: auto 0; clear: both;">
+    <%= yield %>
+  </div>
 
 </body>
 </html>
